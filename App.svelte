@@ -1,14 +1,8 @@
 <div class="flexBox">
 
-	<Frame height="360px" width="520px" bgstyle="default" src="https://willdebras.github.io/viz/img/portfolio/wine_region.svg"
-	 alt="Wine region visualization" bind:isOpen={isOpenState} />
-
-	<Frame height="300px" width="580px" bgstyle="lightblue" src="https://willdebras.github.io/viz/img/portfolio/empire.png" />
-	<Frame height="450px" width="350px" bgstyle="lightblue" src="https://willdebras.github.io/viz/img/portfolio/voc_ed.png"
-	 alt="infographic on vocational education" />
-	<Frame height="450px" width="600px" src="https://willdebras.github.io/viz/img/portfolio/japan_perry_big.png" alt="elevation render of map" />
-	<Frame height=" 320px" width="320px" src="https://raw.githubusercontent.com/willdebras/shotmaps/master/static/shot_map_knicks.png" />
-	<Frame height="380px" width="600px" bgstyle="lightblue" alt="second" src="https://raw.githubusercontent.com/willdebras/viz/master/static/img/portfolio/mcbs.png" />
+	{#each config as item}
+	<Frame height={item.height} width={item.width} src={item.src} bgstyle={item.bgstyle} alt={item.alt} bind:isOpen={isOpenState} />
+	{/each}
 
 </div>
 
@@ -24,14 +18,18 @@
 	</div>
 </Modal>
 
-<button class="btn btn-primary" on:click={()=> (isOpen = true)}>Open Modal</button>
 
 <!-- Import the counter component! -->
 <script>
+  import config from "./config.json";
+  console.log(config);
+
   import Modal from "sv-bootstrap-modal";
   import Frame from "./Frame.svelte";
 
   let isOpenState = false;
+
+  let bodyText = "test";
 </script>
 
 <!-- Include styles -->
@@ -40,6 +38,10 @@
 
   :root {
     background-color: #f4f5f2 !important;
+  }
+
+  body {
+    background-color: #f4f5f2;
   }
 
   h1,
@@ -63,6 +65,7 @@
     align-items: center;
     justify-content: space-around;
     align-content: center;
+    background-color: #f4f5f2;
   }
 
   :global([bgstyle="default"]) {
