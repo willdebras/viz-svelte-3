@@ -9,7 +9,7 @@
 <Modal bind:open={isOpenState}>
 	<div class="modal-header">
 		<h5 class="modal-title">Modal title</h5>
-		<button type="button" class="close" on:click={()=> (isOpen = false)}>
+		<button type="button" class="close" on:click={()=> (isOpenState = false)}>
 			<span aria-hidden="true">&times;</span>
 		</button>
 	</div>
@@ -22,8 +22,6 @@
 <!-- Import the counter component! -->
 <script>
   import config from "./config.json";
-  console.log(config);
-
   import Modal from "sv-bootstrap-modal";
   import Frame from "./Frame.svelte";
 
@@ -37,9 +35,10 @@
   @import url("https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css");
 
   :root {
-    background-color: #f4f5f2 !important;
+    background-color: #f4f5f2;
   }
 
+  html,
   body {
     background-color: #f4f5f2;
   }
