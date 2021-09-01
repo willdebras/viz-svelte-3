@@ -38,7 +38,7 @@
   {
     "height": "320px",
     "width": "320px",
-    "bgstyle": "default",
+    "bgstyle": "lightyellow",
     "src": "https://raw.githubusercontent.com/willdebras/shotmaps/master/static/shot_map_knicks.png",
     "alt": "Interactive visualization of NBA shots",
     "title": "Shot Map of Knicks/Clippers",
@@ -51,6 +51,15 @@
     "src": "https://raw.githubusercontent.com/willdebras/viz/master/static/img/portfolio/mcbs.png",
     "alt": "Screenshot of the MCSB dashboard",
     "title": "MCBS Interactives",
+    "description": "This visualization was built in blah blah blah"
+  },
+  {
+    "height": "350px",
+    "width": "450px",
+    "bgstyle": "lightblue",
+    "src": "https://raw.githubusercontent.com/willdebras/viz/master/static/img/portfolio/urbanization_updated_thin.png",
+    "alt": "Screenshot of the Population Council dashboard",
+    "title": "Population Council Climate Models",
     "description": "This visualization was built in blah blah blah"
   }
 ]

@@ -64,12 +64,7 @@
     object-fit: contain;
     display: block;
     margin: auto;
-    filter:
-                                          /* Each shadow becomes part of the image and the next filter
-                                         adds a shadow beneath it, so we have to be very careful. */ drop-shadow(
-        0 -2px 0 #ccb
-      )
-      drop-shadow(0 2px 0 #ffe) drop-shadow(-2px 0 0 #eed)
-      drop-shadow(2px 0 0 #eed);
+    filter: drop-shadow(0 -2px 0 #ccb) drop-shadow(0 2px 0 #ffe)
+      drop-shadow(-2px 0 0 #eed) drop-shadow(2px 0 0 #eed);
   }
 </style>
