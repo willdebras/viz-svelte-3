@@ -38,8 +38,7 @@
     background-color: #f4f5f2;
   }
 
-  html,
-  body {
+  :global(body) {
     background-color: #f4f5f2;
   }
 
