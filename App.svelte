@@ -61,6 +61,7 @@
     gap: 32px 24px;
     margin: 0 64px;
     padding-top: 64px;
+    padding-bottom: 64px;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
