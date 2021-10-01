@@ -4,10 +4,23 @@
     bgstyle = "default",
     src = null,
     alt = "Will forgot to add alt text",
-    isOpen = false;
+    isOpen = false,
+    title = null,
+    technology = null,
+    description = null,
+    itemTitle = null,
+    itemTech = null,
+    itemDesc = null;
+
+  function modalData() {
+    (isOpen = true),
+      (itemTitle = title),
+      (itemTech = technology),
+      (itemDesc = description);
+  }
 </script>
 
-<div {bgstyle} style="width:{width}; height:{height};"  on:click={()=> (isOpen = true)}>
+<div {bgstyle} style="width:{width}; height:{height};"  on:click={modalData}>
   <img src={src} alt={alt} />
 </div>
 

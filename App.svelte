@@ -1,21 +1,22 @@
 <div class="flexBox">
 
 	{#each config as item}
-	<Frame height={item.height} width={item.width} src={item.src} bgstyle={item.bgstyle} alt={item.alt} bind:isOpen={isOpenState} />
+	<Frame height={item.height} width={item.width} src={item.src} bgstyle={item.bgstyle} alt={item.alt} title={item.title}
+	 technology={item.technology} description={item.description} bind:itemTitle={titleText} bind:itemDesc={descText}
+	 bind:isOpen={isOpenState} />
 	{/each}
 
 </div>
 
 <Modal bind:open={isOpenState}>
 	<div class="modal-header">
-		<h5 class="modal-title">Modal title</h5>
+		<h5 class="modal-title">{titleText}</h5>
 		<button type="button" class="close" on:click={()=> (isOpenState = false)}>
 			<span aria-hidden="true">&times;</span>
 		</button>
 	</div>
-	<div class="modal-body">Woohoo, you're reading this text in a modal!</div>
-	<div class="modal-footer">
-	</div>
+	<img src="images/flourish.svg" alt="flourish" class="flourish" />
+	<div class="modal-body">{descText}</div>
 </Modal>
 
 
@@ -27,7 +28,8 @@
 
   let isOpenState = false;
 
-  let bodyText = "test";
+  $: titleText = null;
+  $: descText = null;
 </script>
 
 <!-- Include styles -->
@@ -40,7 +42,22 @@
 
   :global(body) {
     background-color: #dadfd1;
+    color: #004c72;
     background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 0C6.716 0 0 6.716 0 15c8.284 0 15-6.716 15-15zM0 15c0 8.284 6.716 15 15 15 0-8.284-6.716-15-15-15zm30 0c0-8.284-6.716-15-15-15 0 8.284 6.716 15 15 15zm0 0c0 8.284-6.716 15-15 15 0-8.284 6.716-15 15-15z' fill='%23f4f5f2' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+  }
+
+  :global(.modal-open) {
+    overflow: inherit;
+  }
+
+  :global(.modal-header) {
+    border: revert;
+  }
+
+  .flourish {
+    width: 60%;
+    height: 50%;
+    padding: 6px;
   }
 
   h1,
