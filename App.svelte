@@ -1,3 +1,8 @@
+<svelte:head>
+	<!-- elements go here -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</svelte:head>
+
 <div class="flexBox">
 
 	{#each config as item}
@@ -25,6 +30,8 @@
 
 <!-- Import the counter component! -->
 <script>
+  import Fa from "svelte-fa/src/fa.svelte";
+  import { faFlag } from "@fortawesome/free-solid-svg-icons";
   import config from "./config.json";
   import Modal from "sv-bootstrap-modal";
   import Frame from "./Frame.svelte";

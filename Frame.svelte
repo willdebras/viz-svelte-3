@@ -22,6 +22,9 @@
   }
 </script>
 <div class="{ isOpen ? 'openWrapper' : '' }" >
+<button class = "buttonClosed { isOpen ? 'buttonViz' : '' }" on:click={modalData}>
+Back to gallery
+</button>
   <div class = "frame { isOpen ? 'frameOpen' : '' }" {bgstyle} style="width:{width}; height:{height};"  on:click={modalData}>
     <img src={src} alt={alt} />
   </div>
@@ -29,6 +32,12 @@
 
 
 <style>
+  .buttonClosed {
+    transform: scale(0, 0);
+  }
+  .buttonViz {
+    transform: scale(1, 1);
+  }
   .frame {
     border: 2px solid black;
     /*background-color: #ddc;*/
