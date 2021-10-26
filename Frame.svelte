@@ -13,20 +13,23 @@
     itemDesc = null;
 
   function modalData() {
-    (isOpen = true),
+    (isOpen = !isOpen),
       (itemTitle = title),
       (itemTech = technology),
       (itemDesc = description);
+    window.scrollTo({ top: 0 });
+    window.document.body.classList.toggle("modal-open");
   }
 </script>
-
-<div {bgstyle} style="width:{width}; height:{height};"  on:click={modalData}>
-  <img src={src} alt={alt} />
+<div class="{ isOpen ? 'openWrapper' : '' }" >
+  <div class = "frame { isOpen ? 'frameOpen' : '' }" {bgstyle} style="width:{width}; height:{height};"  on:click={modalData}>
+    <img src={src} alt={alt} />
+  </div>
 </div>
 
 
 <style>
-  div {
+  .frame {
     border: 2px solid black;
     /*background-color: #ddc;*/
     border: solid 20px #eee;
@@ -43,7 +46,7 @@
     padding: 15px;
   }
 
-  div:before {
+  .frame:before {
     border-radius: 2px;
     bottom: -8px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2) inset;
@@ -54,7 +57,7 @@
     top: -8px;
   }
 
-  div:after {
+  .frame:after {
     border-radius: 2px;
     bottom: -10px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
@@ -79,5 +82,26 @@
     margin: auto;
     filter: drop-shadow(0 -2px 0 #ccb) drop-shadow(0 2px 0 #ffe)
       drop-shadow(-2px 0 0 #eed) drop-shadow(2px 0 0 #eed);
+  }
+
+  .openWrapper {
+    position: absolute;
+    z-index: 999999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: XXXpx; /*otherwise div defaults to page width*/
+    height: 100%;
+    margin: auto; /*horizontally centers div*/
+    background-color: #dadfd1;
+    overflow-y: hidden;
+    color: #004c72;
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 0C6.716 0 0 6.716 0 15c8.284 0 15-6.716 15-15zM0 15c0 8.284 6.716 15 15 15 0-8.284-6.716-15-15-15zm30 0c0-8.284-6.716-15-15-15 0 8.284 6.716 15 15 15zm0 0c0 8.284-6.716 15-15 15 0-8.284 6.716-15 15-15z' fill='%23f4f5f2' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+  }
+
+  .frameOpen {
+    margin-left: 10%;
+    margin-top: 10%;
   }
 </style>
