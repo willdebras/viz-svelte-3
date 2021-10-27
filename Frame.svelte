@@ -23,9 +23,11 @@
   }
 </script>
 <div class="{ isOpen ? 'openWrapper' : '' }" >
-<button class = "buttonClosed { isOpen ? 'buttonViz' : '' }" on:click={modalData}>
-Back to gallery
-</button>
+<div class = "buttonWrapper">
+  <button class = "buttonClosed { isOpen ? 'buttonViz' : '' }" on:click={modalData}>
+  Back to gallery
+  </button>
+</div>
 <div style = "flex-basis:100%;"></div>
   <div class = "{ isOpen ? 'frameOpen' : 'frame' }" {bgstyle} 
   style="width:{isOpen ? widthLarge + 'px' : width + 'px'}; height:{isOpen ? 'auto' : height + 'px'};"  
@@ -83,6 +85,11 @@ Back to gallery
     border-radius: 5px;
     border: 1px solid #add8e6;
   }
+
+  .buttonWrapper {
+    flex: 1;
+  }
+
   .frame {
     border: 2px solid black;
     /*background-color: #ddc;*/
@@ -151,6 +158,7 @@ Back to gallery
     display: flex;
     align-items: flex-start;
     align-content: flex-start;
+    justify-content: center;
     gap: 64px;
     flex-wrap: wrap;
     margin: auto; /*horizontally centers div*/
