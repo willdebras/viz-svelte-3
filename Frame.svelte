@@ -62,7 +62,8 @@ Back to gallery
 
   .titleDiv {
     background-color: #faf9f6;
-    border: 1px solid #004c72;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
     transform: scale(1, 1);
     flex: 1;
     margin-top: 32px;
