@@ -35,7 +35,8 @@ Back to gallery
   <div class="{ isOpen ? 'titleDiv' : 'closedDiv'}">
   <h5>{title}</h5>
   <hr>
-  {description}
+  <p style = "font-style:italic; font-weight:200;">Medium: {technology}</p>
+  {@html description}
   </div>
 
 </div>
@@ -60,9 +61,13 @@ Back to gallery
   }
 
   .titleDiv {
+    background-color: #faf9f6;
+    border: 1px solid #004c72;
     transform: scale(1, 1);
     flex: 1;
-    margin-top: 12px;
+    margin-top: 32px;
+    padding: 12px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   }
 
   .buttonClosed {
