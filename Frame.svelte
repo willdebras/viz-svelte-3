@@ -1,6 +1,7 @@
 <script>
   export let height = "300px",
-    width = "450px",
+    width = "450",
+    widthLarge = "600",
     bgstyle = "default",
     src = null,
     alt = "Will forgot to add alt text",
@@ -25,18 +26,55 @@
 <button class = "buttonClosed { isOpen ? 'buttonViz' : '' }" on:click={modalData}>
 Back to gallery
 </button>
-  <div class = "frame { isOpen ? 'frameOpen' : '' }" {bgstyle} style="width:{width}; height:{height};"  on:click={modalData}>
+<div style = "flex-basis:100%;"></div>
+  <div class = "{ isOpen ? 'frameOpen' : 'frame' }" {bgstyle} 
+  style="width:{isOpen ? widthLarge + 'px' : width + 'px'}; height:{isOpen ? 'auto' : height + 'px'};"  
+        on:click={modalData}>
     <img src={src} alt={alt} />
   </div>
+  <div class="{ isOpen ? 'titleDiv' : 'closedDiv'}">
+  <h5>{title}</h5>
+  <hr>
+  {description}
+  </div>
+
 </div>
 
 
 <style>
+  hr {
+    border: none;
+    color: #004c72;
+    border-top: 3px double #004c72;
+    overflow: visible;
+    text-align: left;
+    height: 3px;
+    max-width: 400px;
+    margin: auto 0;
+    margin-bottom: 10px;
+  }
+  .closedDiv {
+    transform: scale(0, 0);
+    width: 0;
+    height: 0;
+  }
+
+  .titleDiv {
+    transform: scale(1, 1);
+    flex: 1;
+    margin-top: 12px;
+  }
+
   .buttonClosed {
     transform: scale(0, 0);
   }
   .buttonViz {
     transform: scale(1, 1);
+    padding: 8px;
+    border: 0;
+    margin: 15px;
+    border-radius: 5px;
+    border: 1px solid #add8e6;
   }
   .frame {
     border: 2px solid black;
@@ -102,6 +140,12 @@ Back to gallery
     right: 0;
     width: XXXpx; /*otherwise div defaults to page width*/
     height: 100%;
+    padding: 64px;
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 64px;
+    flex-wrap: wrap;
     margin: auto; /*horizontally centers div*/
     background-color: #dadfd1;
     overflow-y: hidden;
@@ -110,7 +154,8 @@ Back to gallery
   }
 
   .frameOpen {
-    margin-left: 10%;
-    margin-top: 10%;
+    border: 4px solid #ddc;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   }
 </style>
