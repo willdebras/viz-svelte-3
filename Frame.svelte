@@ -61,6 +61,7 @@ Back to gallery
   }
 
   .titleDiv {
+    max-width: 600px;
     background-color: #faf9f6;
     border: 1px solid lightgrey;
     border-radius: 4px;
