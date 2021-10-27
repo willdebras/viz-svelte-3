@@ -86,6 +86,10 @@
     border: 1px solid #add8e6;
   }
 
+  .buttonViz:hover {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+
   .buttonWrapper {
     flex: 1;
   }
@@ -127,6 +131,12 @@
     position: absolute;
     right: -10px;
     top: -10px;
+  }
+
+  .frame:hover {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25) inset,
+      0 5px 12px 8px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
   }
 
   img {
