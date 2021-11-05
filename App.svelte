@@ -12,28 +12,12 @@
 
 </div>
 
-<!--
-
-<Modal bind:open={isOpenState}>
-	<div class="modal-header">
-		<h5 class="modal-title">{titleText}</h5>
-		<button type="button" class="close" on:click={()=> (isOpenState = false)}>
-			<span aria-hidden="true">&times;</span>
-		</button>
-	</div>
-	<img src="images/flourish.svg" alt="flourish" class="flourish" />
-	<div class="modal-body">{descText}</div>
-</Modal>
--->
-
-
 
 <!-- Import the counter component! -->
 <script>
   import Fa from "svelte-fa/src/fa.svelte";
   import { faFlag } from "@fortawesome/free-solid-svg-icons";
   import config from "./config.json";
-  import Modal from "sv-bootstrap-modal";
   import Frame from "./Frame.svelte";
 
   $: isOpenState = false;

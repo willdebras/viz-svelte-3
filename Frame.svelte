@@ -9,16 +9,10 @@
     title = null,
     technology = null,
     description = null,
-    itemTitle = null,
-    itemTech = null,
-    itemDesc = null,
     isOpenState;
 
   function modalData() {
-    (isOpen = !isOpen),
-      (itemTitle = title),
-      (itemTech = technology),
-      (itemDesc = description);
+    isOpen = !isOpen;
     window.scrollTo({ top: 0 });
     window.document.body.classList.toggle("modal-open");
     isOpenState = isOpen;
