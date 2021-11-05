@@ -7,8 +7,7 @@
 
 	{#each config as item}
 	<Frame height={item.height} width={item.width} widthLarge={item.widthLarge} src={item.src} bgstyle={item.bgstyle} alt={item.alt}
-	 title={item.title} technology={item.technology} description={item.description} bind:itemTitle={titleText}
-	 bind:itemDesc={descText} />
+	 title={item.title} technology={item.technology} description={item.description} bind:isOpenState={isOpenState} />
 	{/each}
 
 </div>
@@ -37,7 +36,7 @@
   import Modal from "sv-bootstrap-modal";
   import Frame from "./Frame.svelte";
 
-  let isOpenState = false;
+  $: isOpenState = false;
 
   $: titleText = null;
   $: descText = null;

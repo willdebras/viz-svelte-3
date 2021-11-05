@@ -11,7 +11,8 @@
     description = null,
     itemTitle = null,
     itemTech = null,
-    itemDesc = null;
+    itemDesc = null,
+    isOpenState;
 
   function modalData() {
     (isOpen = !isOpen),
@@ -20,20 +21,21 @@
       (itemDesc = description);
     window.scrollTo({ top: 0 });
     window.document.body.classList.toggle("modal-open");
+    isOpenState = isOpen;
   }
 </script>
 <div class="{ isOpen ? 'openWrapper' : '' }" >
 <div class = "buttonWrapper">
-  <button class = "buttonClosed { isOpen ? 'buttonViz' : '' }" on:click={modalData}>
+  <button tabindex = "{!isOpen && isOpenState ? '-1' : '0'}" class = "buttonClosed { isOpen ? 'buttonViz' : '' }" on:click={modalData}>
   Back to gallery
   </button>
 </div>
 <div style = "flex-basis:100%;"></div>
-  <div class = "{ isOpen ? 'frameOpen' : 'frame' }" {bgstyle} 
+  <button tabindex = "{isOpenState ? '-1' : '0'}" class = "{ isOpen ? 'frameOpen' : 'frame' }" {bgstyle} 
   style="width:{isOpen ? widthLarge + 'px' : width + 'px'}; height:{isOpen ? 'auto' : height + 'px'};"  
         on:click={modalData}>
     <img src={src} alt={alt} />
-  </div>
+  </button>
   <div class="{ isOpen ? 'titleDiv' : 'closedDiv'}">
   <h5>{title}</h5>
   <hr>
@@ -60,6 +62,7 @@
     transform: scale(0, 0);
     width: 0;
     height: 0;
+    visibility: hidden;
   }
 
   .titleDiv {
@@ -76,6 +79,7 @@
 
   .buttonClosed {
     transform: scale(0, 0);
+    visibility: hidden;
   }
   .buttonViz {
     transform: scale(1, 1);
@@ -84,6 +88,7 @@
     margin: 15px;
     border-radius: 5px;
     border: 1px solid #add8e6;
+    visibility: visible;
   }
 
   .buttonViz:hover {
@@ -109,6 +114,7 @@
     text-align: center;
     position: relative;
     padding: 15px;
+    outline-offset: 10px;
   }
 
   .frame:before {
@@ -182,5 +188,6 @@
     border: 4px solid #ddc;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
       rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    padding: 0;
   }
 </style>
