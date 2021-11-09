@@ -36,7 +36,7 @@
   </button>
 </div>
 <div style = "flex-basis:100%;"></div>
-  <button tabindex = "{isOpenState ? '-1' : '0'}" class = "{ isOpen ? 'frameOpen' : 'frame' }" {bgstyle} 
+  <button tabindex = "{isOpenState && !isOpen ? '-1' : '0'}" class = "{ isOpen ? 'frameOpen' : 'frame' }" {bgstyle} 
   style="width:{isOpen ? widthLarge + 'px' : width + 'px'}; height:{isOpen ? 'auto' : height + 'px'};"  
         on:click={modalData}>
     <img src={src} alt={alt} />
