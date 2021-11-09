@@ -21,7 +21,7 @@
     "alt": "Screenshot of the MCSB dashboard",
     "title": "MCBS Interactives",
     "technology": "D3.js, Shiny, CSS",
-    "description": "This visualization was built in blah blah blah"
+    "description": "<p>While at NORC I led the build and development of the winter COVID supplement of the MCBS Interactives Tool. The tool added new visualizations and UI built to display survey findings of Medicare beneficiaries and their lives during the COVID-19 pandemic.</p><p>Working on the project, I helped develop various interactive visualizations built in D3.js, program crosstalk between various visualizations, and develop other frontend components.</p><p>In August 2021, the work won an <a href=\"https://www.apdu.org/events/2021-apdu-data-viz-award-presentations-08-2021/\">APDU Conference Data Viz Award</a> for its contribution to public data visualization.</p>"
   },
   {
     "id": 1,
