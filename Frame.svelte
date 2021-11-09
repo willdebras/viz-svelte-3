@@ -35,7 +35,6 @@
   Back to gallery
   </button>
 </div>
-<div style = "flex-basis:100%;"></div>
   <button tabindex = "{isOpenState && !isOpen ? '-1' : '0'}" class = "{ isOpen ? 'frameOpen' : 'frame' }" {bgstyle} 
   style="width:{isOpen ? widthLarge + 'px' : width + 'px'}; height:{isOpen ? 'auto' : height + 'px'};"  
         on:click={modalData}>
@@ -102,6 +101,7 @@
 
   .buttonWrapper {
     flex: 1;
+    flex-basis: 100%;
   }
 
   .frame {
@@ -178,7 +178,7 @@
     padding: 64px;
     display: flex;
     align-items: flex-start;
-    align-content: flex-start;
+    align-content: normal;
     justify-content: center;
     gap: 64px;
     flex-wrap: wrap;
