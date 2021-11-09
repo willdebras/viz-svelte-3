@@ -7,7 +7,7 @@
 
 	{#each config as item}
 	<Frame height={item.height} width={item.width} widthLarge={item.widthLarge} src={item.src} bgstyle={item.bgstyle} alt={item.alt}
-	 title={item.title} technology={item.technology} description={item.description} bind:isOpenState={isOpenState} />
+	 title={item.title} technology={item.technology} description={item.description} url={item.url} bind:isOpenState={isOpenState} />
 	{/each}
 
 </div>

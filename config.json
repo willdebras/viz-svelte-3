@@ -9,6 +9,7 @@
     "alt": "Screenshot of the Population Council dashboard",
     "title": "Population Council Community Demographic Models",
     "technology": "Highcharts.js, Shiny, CSS",
+    "url": "https://cdm.popcouncil.org/",
     "description": "<p>Working with Ensemble Media, I was contracted to make various dashboards for the Population Council displaying an attractive UI to generate various data visualizations showcasing modeled estimates of population, urbanization, and migration under various climate scenarios.</p><p>I helped provide consulting on design and visualization, buit various interfaces in R Shiny, and created unique visualizations in the highcharts, plotly, and leaflet libraries. I also helped to configure a server for the hosting of the applications.</p><p>The website was presented at the UN Climate Change Conference (COP26) at <a href=\"https://cdm.popcouncil.org/\">https://cdm.popcouncil.org/</a></p>"
   },
   {
@@ -21,6 +22,7 @@
     "alt": "Screenshot of the MCSB dashboard",
     "title": "MCBS Interactives",
     "technology": "D3.js, Shiny, CSS",
+    "url": "https://mcbs-covid.norc.org/",
     "description": "<p>While at NORC I led the build and development of the winter COVID supplement of the MCBS Interactives Tool. The tool added new visualizations and UI built to display survey findings of Medicare beneficiaries and their lives during the COVID-19 pandemic.</p><p>Working on the project, I helped develop various interactive visualizations built in D3.js, program crosstalk between various visualizations, and develop other frontend components.</p><p>In August 2021, the work won an <a href=\"https://www.apdu.org/events/2021-apdu-data-viz-award-presentations-08-2021/\">APDU Conference Data Viz Award</a> for its contribution to public data visualization.</p>"
   },
   {

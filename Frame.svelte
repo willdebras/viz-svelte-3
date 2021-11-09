@@ -9,9 +9,20 @@
     title = null,
     technology = null,
     description = null,
+    url = "/404",
     isOpenState;
 
   function modalData() {
+    if (!isOpen) {
+      isOpen = !isOpen;
+      window.scrollTo({ top: 0 });
+      window.document.body.classList.toggle("modal-open");
+      isOpenState = isOpen;
+    } else {
+      window.open(url, "_blank");
+    }
+  }
+  function closeModal() {
     isOpen = !isOpen;
     window.scrollTo({ top: 0 });
     window.document.body.classList.toggle("modal-open");
@@ -20,7 +31,7 @@
 </script>
 <div class="{ isOpen ? 'openWrapper' : '' }" >
 <div class = "buttonWrapper">
-  <button tabindex = "{!isOpen && isOpenState ? '-1' : '0'}" class = "buttonClosed { isOpen ? 'buttonViz' : '' }" on:click={modalData}>
+  <button tabindex = "{!isOpen && isOpenState ? '-1' : '0'}" class = "buttonClosed { isOpen ? 'buttonViz' : '' }" on:click={closeModal}>
   Back to gallery
   </button>
 </div>
