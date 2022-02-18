@@ -40,8 +40,8 @@
   },
   {
     "id": 5,
-    "height": "340",
-    "width": "380",
+    "height": "400",
+    "width": "500",
     "widthLarge": "800",
     "bgstyle": "lightyellow",
     "src": "https://user-images.githubusercontent.com/37971596/150464926-fe8b5ca5-f834-410e-9227-0b36ee02aba3.png",
@@ -52,8 +52,21 @@
     "description": "<p>This small web application was built to display positional shot data from NBA games from the 2021-2022 season. It cleanly combines the declarative nature of Svelte with the utility of D3 scales to plot a base court and overlay positional data with hover animations and tooltips. It features a zoomable, scaleable SVG viewer wrapper component, so a user can zoom in on the court and see every shot taken for any NBA game.</p><p>The application's underlying data was queried and cleaned from the NBA website in R, cleaned, and processed into JSON to be used in the application itself.</p></p>"
   },
   {
+    "id": 9,
+    "height": "340",
+    "width": "500",
+    "widthLarge": "800",
+    "bgstyle": "default",
+    "src": "https://willdebras.github.io/viz/img/portfolio/formulaOne.gif",
+    "url": "https://formula-three.vercel.app/",
+    "alt": "Interactive visualization of NBA shots",
+    "title": "Formula Three",
+    "technology": "Three.js, GSAP",
+    "description": "<p>Formula Three is a scrollytelling website built with Three.js and GSAP ScrollTrigger.js to showcase the new 2022 features to the Formula One car.</p><p>The site features the use of scrollTrigger to pin and unpin canvas elements, uses gsap.to and gsap.toFrom to update the canvas, and toggleClass to provide transitions with the scroll of the page page. It also features many interesting Three.js features including attractive lighting and environment mapping, utilizing a LoadingManger to create a progress bar, and tweening of cameras with GSAP animations.</p>"
+  },
+  {
     "id": 1,
-    "height": "360",
+    "height": "330",
     "width": "520",
     "widthLarge": "800",
     "bgstyle": "default",
